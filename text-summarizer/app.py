@@ -6,6 +6,8 @@ from sumy.parsers.html import HtmlParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
+import nltk
+nltk.download('punkt')
 
 app = Flask(__name__)
 CORS(app)
