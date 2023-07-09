@@ -123,7 +123,7 @@ function FlipkartScraperPage() {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/run/generate', body);
+      const response = await axios.post('https://flipkart-scraper.onrender.com/run/generate', body);
       setLoading(false);
       setData(response.data)
       setShowProductNameInTable(isProductNameChecked)
@@ -166,7 +166,7 @@ function FlipkartScraperPage() {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/run/generate', body);
+      const response = await axios.post('https://flipkart-scraper.onrender.com/run/generate', body);
       setLoading(false);
       setData(response.data)
     } catch {
