@@ -1,0 +1,7 @@
+beautifulsoup4==4.12.2
+Flask==2.3.2
+Flask_Cors==4.0.0
+pandas==2.0.3
+requests==2.31.0
+waitress==2.1.2
+python-dotenv==1.0.0
