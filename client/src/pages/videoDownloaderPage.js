@@ -23,7 +23,7 @@ function VideoDownloaderPage() {
     }
 
     try {
-      const response = await axios.post('https://online-video-downloader-lq5s.onrender.com/get-info', body);
+      const response = await axios.post('https://online-video-downloader-41qj.onrender.com/get-info', body);
       setLoading(false);
       setData(response.data)
     } catch {
