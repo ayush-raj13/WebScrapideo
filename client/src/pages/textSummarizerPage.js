@@ -52,7 +52,7 @@ function TextSummarizerPage() {
       data:[methodSelection.value, languageSelection.value, sentenceCount, selectedInputType, input]
     };
     try {
-      const response = await axios.post('http://localhost:8080/run/predict', body);
+      const response = await axios.post('https://text-summarizer-qehl.onrender.com/run/predict', body);
 
       setLoading(false);
       setOutput(response.data);
