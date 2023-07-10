@@ -7,7 +7,7 @@
   <title>Document</title>
   <style type="text/css">
     #landscape{
-             position: absolute;
+             position: fixed;
              top: 0px;
              left: 0px;
              background: #000000;
@@ -23,7 +23,7 @@
             color: #FFFFFF;                                  
             opacity: 1;
             top: 50%;
-            position: absolute;
+            position: fixed;
             text-align: center;
             display: inline-block;
             width: 100%;
@@ -36,9 +36,11 @@
             {  
               case 'portrait-primary':                 
                      document.getElementById("landscape").style.display="block";
+                     document.body.classList.add('overflow-hidden');
                      break;
              default:                   
                     document.getElementById("landscape").style.display="none";
+                    document.body.classList.remove('overflow-hidden');
                     break;                            
             }
           }
