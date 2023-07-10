@@ -20,7 +20,7 @@ The WebScrapideo website offers the following key features:
 
 To run the client locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/WebScrapideo.git`
+1. Clone the repository: `git clone https://github.com/ayush-raj13/WebScrapideo.git`
 2. Navigate to the project directory: `cd client`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
@@ -28,7 +28,7 @@ To run the client locally, follow these steps:
 
 To run the flask server locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/WebScrapideo.git`
+1. Clone the repository: `git clone https://github.com/ayush-raj13/WebScrapideo.git`
 2. Navigate to the project directory: `cd flipkart-scraper` (Same for text-summarizer and online-video-downloader)
 3. Install dependencies:
      1. `pip install virtualenv`
