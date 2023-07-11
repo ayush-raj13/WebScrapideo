@@ -17,7 +17,7 @@ function Table({ data, config }) {
         });
 
         return (
-            <tr className="border-b" key={item.Product_url || item.url}>
+            <tr className="border-b" key={item._id || item.Product_url || item.url}>
                 {renderedCells}
             </tr>
         );
