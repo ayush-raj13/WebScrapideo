@@ -1,6 +1,6 @@
 import Link from './Link';
 
-function Sidebar() {
+function Navbar() {
   const links = [
     { label: 'Home', path: '/' },
     { label: 'Summarizer', path: '/text-summarizer' },
@@ -13,8 +13,8 @@ function Sidebar() {
       <Link
         key={link.label}
         to={link.path}
-        className="mb-3"
-        activeClassName="font-bold border-l-4 border-blue-500 pl-2"
+        className="mr-4 text-gray-600 hover:text-gray-900 transition duration-300 ease-in-out"
+        activeClassName="font-bold text-blue-500"
       >
         {link.label}
       </Link>
@@ -22,10 +22,17 @@ function Sidebar() {
   });
 
   return (
-    <div className="sticky top-0 overflow-y-scroll flex flex-col items-start">
-      {renderedLinks}
-    </div>
+    <nav className="bg-white shadow-lg p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-[30px] font-semibold ">
+        <span class="magic"><span class="magic-text">WebScrapideo</span></span>
+        </div>
+        <div className="flex space-x-4">
+          {renderedLinks}
+        </div>
+      </div>
+    </nav>
   );
 }
 
-export default Sidebar;
+export default Navbar;

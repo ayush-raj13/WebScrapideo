@@ -1,3 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+:root {  
+    --color1: #6267f1;
+    --color2: #457def;
+    --color3: #179ee9;
+    --color4: #0fabca;
+    --color5: #0fafb2;
+    --color6: #10b78d;
+
+    /* --red: #F31559;
+    --magenta: #FF52A2;
+    --orange: #FFB07F;
+
+    --green: #1A5D1A;
+    
+    --blue: #78C1F3; */
+  }
+  
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  div > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  div > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--color1),
+      var(--color2),
+      var(--color3),
+      var(--color4),
+      var(--color5),
+      var(--color6),
+      var(--color6),
+      var(--color5),
+      var(--color4),
+      var(--color3),
+      var(--color2),
+      var(--color1)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
