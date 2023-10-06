@@ -1,3 +1,4 @@
+import React from 'react';
 import Sidebar from './components/Sidebar';
 import Route from './components/Route';
 import HomePage from './pages/homePage';
@@ -6,10 +7,13 @@ import FlipkartScraperPage from './pages/flipkartScraperPage';
 import VideoDownloaderPage from './pages/videoDownloaderPage';
 
 function App() {
-  return(
-    <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+  return (
+    <div className="container mx-auto mt-4">
+      {/* Sidebar */}
       <Sidebar />
-      <div className="col-span-5">
+
+      {/* Content */}
+      <div className="mx-2"> {/* Adjust the margin-left to match your Sidebar width */}
         <Route path="/">
           <HomePage />
         </Route>
@@ -24,7 +28,7 @@ function App() {
         </Route>
       </div>
     </div>
-  )
+  );
 }
 
 export default App;
