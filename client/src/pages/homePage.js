@@ -10,12 +10,12 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen dark:bg-gray-800">
       <Hero title="Data extraction from HTML made easy" desc="" />
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center -mx-4">
+          <div className="flex flex-wrap items-center justify-center -mx-4 dark:bg-gray-800">
             <motion.div
               className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8"
               initial={{ opacity: 0, y: 50 }}
@@ -23,7 +23,7 @@ const HomePage = () => {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               whileHover={{ scale: 1.05, boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
             >
-              <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-6 dark:bg-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12 text-indigo-500 mx-auto mb-4"
@@ -36,14 +36,14 @@ const HomePage = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-800">
+                <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
                   Text Summarizer
                 </h2>
                 
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   Summarize text and HTML pages with ease using our Text Summarizer feature. It leverages the power of the Sumy library, which supports various summarization methods including:
                 </p>
-                <ul className="list-disc pl-6 mt-4 text-gray-600">
+                <ul className="list-disc pl-6 mt-4 text-gray-600 dark:text-gray-300">
                   <li>LSA (Latent Semantic Analysis)</li>
                   <li>TextRank</li>
                   <li>LexRank</li>
@@ -52,7 +52,7 @@ const HomePage = () => {
                   <li>KL-Sum</li>
                   <li>Reduction</li>
                 </ul>
-                <p className="text-gray-600 mt-4">
+                <p className="text-gray-600 mt-4 dark:text-gray-300">
                   Each method offers unique approaches to extract important information and create concise summaries. With WebScrapideo, you can access these summarization methods in one place, making text summarization a breeze.
                 </p>
               </div>
@@ -65,7 +65,7 @@ const HomePage = () => {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               whileHover={{ scale: 1.05, boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
             >
-              <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-6 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12 text-indigo-500 mx-auto mb-4"
@@ -78,13 +78,13 @@ const HomePage = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-800">
+                <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
                   Flipkart Web Scraping
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   Extract data from Flipkart effortlessly with our Flipkart Web Scraping feature. Powered by the BeautifulSoup library, it allows you to select the specific data you want to scrape and preview the result before downloading it in CSV format. Use cases for the scraped data from Flipkart include:
                 </p>
-                <ul className="list-disc pl-6 mt-4 text-gray-600">
+                <ul className="list-disc pl-6 mt-4 text-gray-600 text-gray-800 dark:text-gray-300">
                   <li>Market research and analysis</li>
                   <li>Competitor price tracking</li>
                   <li>Product comparison and reviews analysis</li>
@@ -92,7 +92,7 @@ const HomePage = () => {
                   <li>Data-driven decision making</li>
                   <li>Brand Monitoring</li>
                 </ul>
-                <p className="text-gray-600 mt-4">
+                <p className="text-gray-600 mt-4 dark:text-gray-300">
                   With WebScrapideo, you can easily scrape and leverage data from Flipkart for various business and analytical purposes, empowering you to make informed decisions.
                 </p>
               </div>
@@ -105,7 +105,7 @@ const HomePage = () => {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               whileHover={{ scale: 1.05, boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
             >
-              <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-6 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12 text-indigo-500 mx-auto mb-4"
@@ -118,14 +118,14 @@ const HomePage = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-800">
+                <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
                   Online Video Downloader
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-200">
                   Download online videos hassle-free with our Online Video Downloader feature. Utilizing the yt-dlp library, you can retrieve download links for videos from various websites, including:
                 </p>
                 {!showAllWebsites ? (
-                  <ul className="list-disc pl-6 mt-4 text-gray-600">
+                  <ul className="list-disc pl-6 mt-4 text-gray-600 dark:text-gray-300">
                     <li>YouTube</li>
                     <li>Vimeo</li>
                     <li>Twitter</li>
@@ -136,7 +136,7 @@ const HomePage = () => {
                   </ul>
                 ) : (
                   <>
-                    <ul className="list-disc pl-6 mt-4 text-gray-600">
+                    <ul className="list-disc pl-6 mt-4 text-gray-600 dark:bg-gray-700 dark:text-gray-300">
                       <li>FiveTV</li>
                       <li>PopcornTV</li>
                       <li>PornCom</li>
@@ -148,7 +148,7 @@ const HomePage = () => {
                       <li>YourUpload</li>
                       <li>Zoom</li>
                     </ul>
-                    <p className="text-gray-600 mt-4">
+                    <p className="text-gray-600 mt-4  dark:bg-gray-700 dark:text-gray-300">
                       Note: This is not an exhaustive list. WebScrapideo supports many more websites for video downloading.
                     </p>
                   </>
@@ -159,7 +159,7 @@ const HomePage = () => {
                 >
                   {showAllWebsites ? 'Read Less' : 'Read More'}
                 </button>
-                <p className="text-gray-600 mt-4">
+                <p className="text-gray-600 mt-4 dark:bg-gray-700 dark:text-gray-300">
                   WebScrapideo provides a unique service by offering an extensive range of supported websites for video downloading, setting it apart from other platforms in the market. Enjoy the freedom to download videos hassle-free.
                 </p>
               </div>

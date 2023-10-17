@@ -315,29 +315,29 @@ function FlipkartScraperPage() {
   buttonText = isError ? <>Error</> : buttonText;
 
   return (
-    <div className="flex flex-col space-y-8 justify-center items-center min-h-screen">
+    <div className="flex flex-col space-y-8 justify-center items-center min-h-screen dark:bg-gray-800">
       <Hero title="Flipkart Scraper" desc="An advanced Flipkart web scraper that combines automated data extraction capabilities with user-defined data selection, allowing users to effortlessly retrieve specific information of their choice from the Flipkart website with precision and efficiency."/>
     
-      <Panel className='flex flex-col space-y-8'>
-      <div className='flex flex-col space-y-4'>
+      <Panel className='flex flex-col space-y-8  text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
+      <div className='flex flex-col space-y-4  text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
         <label>Enter URL</label>
-        <input value={url} onChange={handleUrlChange} type="text" className="py-1 my-3 bg-gray-50 border border-gray-300"/>
+        <input value={url} onChange={handleUrlChange} type="text" className="py-1 my-3 bg-gray-50 border border-gray-300  dark:bg-gray-600"/>
         <div className="flex justify-center">
-          <Button success rounded outline onClick={handleUrlSubmit} disabled={loading}>
+          <Button className="text-gray-800 dark:bg-gray-800 dark:text-gray-200" success rounded outline onClick={handleUrlSubmit} disabled={loading}>
           {buttonText}
           </Button>
         </div>
       </div>
-      <div className='flex flex-col space-y-4'>
+      <div className='flex flex-col space-y-4 dark:text-gray-200'>
         <label>Search for products, brands and more</label>
-        <input value={query} onChange={handleQueryChange} type="text" className="py-1 my-3 bg-gray-50 border border-gray-300"/>
-        <div className="flex justify-center">
-          <Button success rounded outline onClick={handleQuerySubmit} disabled={loading}>
+        <input value={query} onChange={handleQueryChange} type="text" className="py-1 my-3 bg-gray-50 border border-gray-300 dark:bg-gray-600"/>
+        <div className="flex justify-center  dark:bg-gray-800">
+          <Button className="text-gray-800 dark:bg-gray-800 dark:text-gray-200" success rounded outline onClick={handleQuerySubmit} disabled={loading}>
           {buttonText}
           </Button>
         </div>
-      </div>
-      <Panel className='flex flex-col space-y-4'>
+      </div>      
+      <Panel className='flex text-gray-800 flex-col space-y-4 dark:bg-gray-800 dark:text-gray-200'>
         <label>Example URLs</label>
         <ul style={{listStyleType:"disc"}} className="flex flex-col space-y-2">
           <li className="flex flex-row space-x-4 items-start justify-start"><div>1. </div><Button success className="text-white active:bg-green-700" onClick={() =>  navigator.clipboard.writeText('https://www.flipkart.com/mobiles/pr?sid=tyy%2C4io&p%5B%5D=facets.price_range.from%3D10000&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlNob3AgTm93Il0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D&otracker=clp_metro_expandable_3_7.metroExpandable.METRO_EXPANDABLE_Shop%2BNow_mobile-phones-store_O1WYX08RHODP_wp4&fm=neo%2Fmerchandising&iid=M_45097844-8fd6-4d1b-b414-faca5617af95_7.O1WYX08RHODP&ppt=hp&ppn=homepage&ssid=di5cfb5mls0000001688463812500&p%5B%5D=facets.price_range.to%3D20000&p%5B%5D=facets.brand%255B%255D%3DPOCO&page=')}>Copy</Button></li>
@@ -346,7 +346,7 @@ function FlipkartScraperPage() {
         </ul>
         <div className="font-bold">Important: Append "&page=" at the end of URL</div>
       </Panel>
-      <div className='flex flex-col space-y-4'>
+      <div className=' flex flex-col space-y-4 text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
         <label>Data selection</label>
         <Checkbox label="Product's Name" checked={isProductNameChecked} onChange={handleProductNameSelection} />
         <Checkbox label="Current Price" checked={isCurrentPriceChecked} onChange={handleCurrentPriceSelection} />
@@ -362,7 +362,7 @@ function FlipkartScraperPage() {
         <Checkbox label="Image URL" checked={isImageUrlChecked} onChange={handleImageUrlSelection} />
         <Checkbox label="Product URL" checked={isProductUrlChecked} onChange={handleProductUrlSelection} />
       </div>
-      <div className='flex flex-col space-y-4'>
+      <div className='text-gray-800 flex flex-col space-y-4 dark:bg-gray-800 dark:text-gray-200'>
         <label>Download Data</label>
         <div className="flex justify-start">
         <CsvDownloadButton 
@@ -384,7 +384,7 @@ function FlipkartScraperPage() {
         > Download in CSV</CsvDownloadButton>
         </div>
       </div>
-      <div className='flex flex-col space-y-4'>
+      <div className='text-gray-800 flex flex-col space-y-4 dark:bg-gray-800 dark:text-gray-200'>
         <label>Preview Data</label>
         <SortableTable data={data} config={config} />
       </div>

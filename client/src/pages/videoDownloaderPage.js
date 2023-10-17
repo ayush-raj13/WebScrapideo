@@ -86,19 +86,19 @@ function VideoDownloaderPage() {
 ];
 
   return (
-    <div className="flex flex-col space-y-8 justify-center items-center min-h-screen">
+    <div className="flex flex-col space-y-8 justify-center items-center min-h-screen text-gray-800 dark:bg-gray-800 dark:text-gray-200">
       <Hero title="Online Video Downloader" desc="Download videos from any website hassle-free! Our online video downloader supports countless platforms, making it easy to save your favorite videos for offline enjoyment."/>
-      <Panel className='flex flex-col space-y-8'>
+      <Panel className='flex flex-col space-y-8 text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
       <div className='flex flex-col space-y-4'>
         <label>Enter URL</label>
-        <input value={url} onChange={handleUrlChange} type="text" className="py-1 my-3 bg-gray-50 border border-gray-300"/>
-        <div className="flex justify-center">
-          <Button success rounded outline onClick={handleUrlSubmit} disabled={loading}>
+        <input value={url} onChange={handleUrlChange} type="text" className="py-1 my-3 bg-gray-50 border border-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-200"/>
+        <div className="flex justify-center text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+          <Button className=" text-gray-800 dark:bg-gray-800 dark:text-gray-200" success rounded outline onClick={handleUrlSubmit} disabled={loading}>
           {buttonText}
           </Button>
         </div>
       </div>
-      <Panel className='flex flex-col space-y-4'>
+      <Panel className='flex flex-col space-y-4 text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
         <label className="font-bold">Note:</label>
         <ul style={{listStyleType:"disc"}} className="font-bold">
           <li>acodec='none' means there is no audio</li>
@@ -106,10 +106,10 @@ function VideoDownloaderPage() {
           <li><a className="text-blue-700 underline visited:text-violet-800" href="https://www.onlineconverter.com/add-audio-to-video">Click here</a> to merge audio and video.</li>
         </ul>
       </Panel>
-      <div className='flex flex-col space-y-4'>
+      <div className='flex flex-col space-y-4 text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
         <Table data={data} config={config} />
       </div>
-      <Panel className='flex flex-col space-y-4'>
+      <Panel className='flex flex-col space-y-4 text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
         <label className="font-bold">Note: To download videos with m3u8_native protocol</label>
         <ul style={{listStyleType:"disc"}} className="font-bold">
           <li>Copy download link (generated from this website) for selected m3u8_native protocol.</li>
