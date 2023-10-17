@@ -48,13 +48,13 @@ function Dropdown({ options, value, onChange }) {
   return (
     <div ref={divEl} className="w-48 relative">
       <Panel
-        className="flex justify-between items-center cursor-pointer"
+        className="flex justify-between items-center cursor-pointer text-gray-800 dark:bg-gray-800 dark:text-gray-200"
         onClick={handleClick}
       >
         {value?.label || 'Select...'}
         <GoChevronDown className="text-lg" />
       </Panel>
-      {isOpen && <Panel className="absolute top-full z-10">{renderedOptions}</Panel>}
+      {isOpen && <Panel className="absolute top-full z-10 text-gray-800 dark:bg-gray-800 dark:text-gray-200">{renderedOptions}</Panel>}
     </div>
   );
 }

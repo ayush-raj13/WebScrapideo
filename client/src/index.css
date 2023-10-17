@@ -78,3 +78,7 @@
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
   }
+
+  .main {
+    @apply dark:bg-black/75
+  }
