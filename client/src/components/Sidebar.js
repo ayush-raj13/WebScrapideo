@@ -56,11 +56,11 @@ function Navbar() {
 
   return (
     <nav className={`bg-white shadow-lg p-4 text-gray-800 ${theme === 'dark' ? 'dark:bg-gray-800 dark:text-gray-200' : ''}`}>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
         <div className="text-[30px] font-semibold ">
           <span class="magic"><span class="magic-text">WebScrapideo</span></span>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex-row space-x-4">
           {renderedLinks}
           <div>
             <button
